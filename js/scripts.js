@@ -10,7 +10,7 @@ Pizza.prototype.totalPrice = function() {
   return '$' + (((this.size + this.topping) * this.quantity) + this.delivery);
 };
 
-var order = new Pizza ();
+var order = new Pizza (0, 0, 0, 0);
 
 // front-end logic
 $(document).ready(function() {
@@ -18,10 +18,10 @@ $(document).ready(function() {
     event.preventDefault();
     $("ul#receipt").empty(order);
 
-    this.size = parseInt($('#pizzaSize').val());
-    this.topping = parseInt($('input[name="topping"]:checked').val());
-    this.delivery = parseInt($('#pizzaDelivery').val());
-    this.quantity = parseInt($('#pizzaQuantity').val());
+    order.size = parseInt($('#pizzaSize').val());
+    order.topping = parseInt($('input[name="topping"]:checked').val());
+    order.delivery = parseInt($('#pizzaDelivery').val());
+    order.quantity = parseInt($('#pizzaQuantity').val());
 
     var finalSize = $("#pizzaSize option:selected").text();
     var finalTopping = $('input[name="topping"]:checked').text();
