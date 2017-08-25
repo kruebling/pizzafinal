@@ -13,24 +13,23 @@
         <form id="pizza">
 
           <div class="form-group">
-            <label for="selectSize">Select Size of Pie</label>
+            <label for="pizzaSize">Select Size of Pie</label>
             <select class="form-control" id="pizzaSize">
-              <option value="8.99">Small</option>
-              <option value="10.99">Medium</option>
-              <option value="12.99">Large</option>
+              <option value="9">Small</option>
+              <option value="11">Medium</option>
+              <option value="12">Large</option>
             </select>
           </div>
 
-          <div class="form-group">
-            <label for="selectTopping">Add Toppings - Meat:</label><br>
+          <div class="form-group" id="pizzaTopping">
+            <label for="pizzaTopping">Add Toppings (1$ Each) - Meat:</label><br>
             <input type="checkbox" name="topping" value="1">Pepperoni<br>
             <input type="checkbox" name="topping" value="1">Sausage<br>
             <input type="checkbox" name="topping" value="1">Chicken<br>
-            <input type="checkbox" name="topping" value="1">Bacon<br>
-          </div>
+            <input type="checkbox" name="topping" value="1">Bacon<br><br>
 
-          <div class="form-group">
-            <label for="selectTopping">Add Toppings - Veggies:</label><br>
+
+            <label for="pizzaTopping">Add Toppings (1$ Each) - Veggies:</label><br>
             <input type="checkbox" name="topping" value="1">Black Olives<br>
             <input type="checkbox" name="topping" value="1">Tomato<br>
             <input type="checkbox" name="topping" value="1">Pineapple (yes it's a pizza topping!)<br>
@@ -38,16 +37,16 @@
           </div>
 
           <div class="form-group">
-            <label for="selectDelivery">Will this be for Delivery or Carryout?</label>
-            <select class="form-control" id="delivery">
+            <label for="pizzaDelivery">Will this be for Delivery or Carryout?  ($3.00 Delivery Charge)</label>
+            <select class="form-control" id="pizzaDelivery">
               <option value="">Carry Out</option>
-              <option value="3.99">Delivery ($3.99 Delivery Charge)</option>
+              <option value="3">Delivery</option>
 
             </select>
           </div>
 
           <div class="form-group">
-            <label for="selectAge">How many would you like? (max three per order)</label>
+            <label for="pizzaQuantity">How many would you like? (max three per order)</label>
             <select class="form-control" id="pizzaQuantity">
               <option value="1">1</option>
               <option value="2">2</option>
