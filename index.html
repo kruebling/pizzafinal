@@ -1,16 +1,68 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset="utf-8">
-    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
-    <link href="css/styles.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
-    <title>Ping Pong</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza</title>
   </head>
-
   <body>
-  
+    <div class="container">
+      <h1>Pizza Order!</h1><br><br>
+        <form id="pizza">
+
+          <div class="form-group">
+            <label for="selectSize">Select Size of Pie</label>
+            <select class="form-control" id="pizzaSize">
+              <option value="8.99">Small</option>
+              <option value="10.99">Medium</option>
+              <option value="12.99">Large</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="selectTopping">Add Toppings - Meat:</label><br>
+            <input type="checkbox" name="topping" value="0">Cheese (No Charge)<br>
+            <input type="checkbox" name="topping" value="1">Pepperoni<br>
+            <input type="checkbox" name="topping" value="1">Sausage<br>
+            <input type="checkbox" name="topping" value="1">Chicken<br>
+            <input type="checkbox" name="topping" value="1">Bacon<br>
+          </div>
+
+          <div class="form-group">
+            <label for="selectTopping">Add Toppings - Veggies:</label><br>
+            <input type="checkbox" name="topping" value="1">Pepperoni<br>
+            <input type="checkbox" name="topping" value="1">Sausage<br>
+            <input type="checkbox" name="topping" value="1">Chicken<br>
+            <input type="checkbox" name="topping" value="1">Bacon<br>
+          </div>
+
+          <div class="form-group">
+            <label for="select">Pricing</label>
+            <select class="form-control" id="movieAdmission">
+              <option value="1">Student/Senior</option>
+              <option value="2">Child</option>
+              <option value="0">General Admission</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="selectAge">Quantity</label>
+            <select class="form-control" id="movieQuantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+<!-- form/container end -->
+      </form>
+      <ul id="receipt">
+
+      </ul>
+    </div>
   </body>
 </html>
