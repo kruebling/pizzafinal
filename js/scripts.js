@@ -7,10 +7,10 @@ function Pizza(size, topping, delivery, quantity) {
 }
 
 Pizza.prototype.totalPrice = function() {
-  return '$' + (((this.size + this.topping) * this.quantity) + this.delivery);
+  return (((this.size + this.topping) * this.quantity) + this.delivery);
 };
 
-var order = new Pizza (0, 0, 0, 0);
+var order = new Pizza ();
 
 // front-end logic
 $(document).ready(function() {
