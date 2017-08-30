@@ -20,8 +20,12 @@ _Website is currently a work in progress_
 
 ## Specifications
 
-* Back-end Calculations for Final Price
-  * ((size + topping) * quantity) + delivery
+| Behavior for this program                                         | Input         | OutPut |
+| ----------------------------------------------------------------- |:-------------:| ------:|
+| Output is a given pizza size (small = 9, medium = 11, large = 13) | 9             | 9      |
+| Output is a given input + (n = amount of selected toppings)       | 9, 3          | 12     |
+| (Output is a given input + (n)) * y = quantity of order           | 9, 3, 2       | 24     |
+| (Output is a given input + (n)) * y + z = delivery charge         | 9, 3, 2, 3    | 27     |
 
 
 ## Support and contact details
