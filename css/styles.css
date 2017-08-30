@@ -9,7 +9,7 @@
 
 .jumbotron {
   text-align: center;
-  background-color: pink;
+  background: rgba(214, 214, 214, 0.5);
 }
 
 form {

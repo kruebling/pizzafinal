@@ -1,12 +1,12 @@
-# _Ping-Pong_
+# _Pizza Order_
 
-## _August 18th 2017_
+## _August 29th 2017_
 
 ## By _**Keegan Ruebling**_
 
 ## Description
 
-_this website takes user input, lists every number below the input number, and replaces listed digits with "ping, pong, or ping-pong". <https://kruebling.github.io/pingpong/>_
+_this website takes user input, calculates an order price based of the selections of the user, and returns a final price". <https://kruebling.github.io/pizzafinal/>_
 
 ## Setup/Installation Requirements
 
@@ -20,19 +20,8 @@ _Website is currently a work in progress_
 
 ## Specifications
 
-* Count to provided number
-  * user inputs 5
-  * [1,2,3,4,5]
-* Replaces index if divisible by 3 with ping
-  * user inputs 5
-  * [1,2,ping,4,5]
-* Replaces index if divisible by 5 with pong
-  * user inputs 5
-  * [1,2,ping,4,pong]
-* Applies ping-pong if both rules apply
-  * user inputs 15
-  * [1,2,ping,4,pong,ping,7,8,ping,pong,11,ping,13,14,ping-pong]
-* Creates unordered list of all index
+* Back-end Calculations for Final Price
+  * ((size + topping) * quantity) + delivery
 
 
 ## Support and contact details
