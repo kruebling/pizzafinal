@@ -15,3 +15,8 @@
 form {
   max-width: 500px;
 }
+
+body {
+  background-image: url("../img/8_Pizza.jpg");
+  background-size: cover;
+}

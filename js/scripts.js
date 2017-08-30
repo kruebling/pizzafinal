@@ -31,12 +31,13 @@ $(document).ready(function() {
     var finalQuantity = $("#pizzaQuantity option:selected").text();
     var finalPrice = order.totalPrice();
 
-    $('li#size').append(finalSize);
-    $('li#topping').append(topping);
-    $('li#delivery').append(finalDelivery);
-    $('li#quantity').append(finalQuantity);
-    $('li#total').append(finalPrice);
+    $('li#size').text("Selected Size: " + finalSize);
+    $('li#topping').text("Amount of Added Toppings: " + topping);
+    $('li#delivery').text("Delivery or Carry Out: " + finalDelivery);
+    $('li#quantity').text("Amount of Pizzas: " + finalQuantity);
+    $('li#total').text("Price of order: $" + finalPrice);
 
     $("ul#receipt").show(800);
+
   });
 });
