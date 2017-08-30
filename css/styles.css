@@ -1,0 +1,17 @@
+#receipt {
+  display: none;
+}
+
+.well {
+  max-width: 400px;
+  background-color: lightblue;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: pink;
+}
+
+form {
+  max-width: 500px;
+}

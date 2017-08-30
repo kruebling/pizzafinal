@@ -1,14 +1,15 @@
 // back-end logic
-function Pizza(size, topping, delivery, quantity) {
+function Pizza(size, delivery, quantity) {
   this.size = size;
-  this.topping = topping;
   this.delivery = delivery;
   this.quantity = quantity;
 }
 
 Pizza.prototype.totalPrice = function() {
-  return (((this.size + this.topping) * this.quantity) + this.delivery);
+  return (((this.size + topping) * this.quantity) + this.delivery);
 };
+
+var topping = 0;
 
 var order = new Pizza ();
 
@@ -16,20 +17,26 @@ var order = new Pizza ();
 $(document).ready(function() {
   $("form#pizza").submit(function(event) {
     event.preventDefault();
-    $("ul#receipt").empty(order);
+
+    $('input:checkbox[name=topping]:checked').each(function() {
+     topping += 1;
+   });
 
     order.size = parseInt($('#pizzaSize').val());
-    order.topping = parseInt($('input[name="topping"]:checked').val());
     order.delivery = parseInt($('#pizzaDelivery').val());
     order.quantity = parseInt($('#pizzaQuantity').val());
 
     var finalSize = $("#pizzaSize option:selected").text();
-    var finalTopping = $('input[name="topping"]:checked').text();
     var finalDelivery = $("#pizzaDelivery option:selected").text();
     var finalQuantity = $("#pizzaQuantity option:selected").text();
+    var finalPrice = order.totalPrice();
 
-    // var order = new Pizza(inputtedSize, inputtedTopping, inputtedDelivery, inputtedQuantity);
+    $('li#size').append(finalSize);
+    $('li#topping').append(topping);
+    $('li#delivery').append(finalDelivery);
+    $('li#quantity').append(finalQuantity);
+    $('li#total').append(finalPrice);
 
-    $('ul#receipt').append(finalSize + " " + finalTopping + " " + finalDelivery + " " + finalQuantity + " " + order.totalPrice());
+    $("ul#receipt").show(800);
   });
 });

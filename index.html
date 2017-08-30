@@ -9,15 +9,17 @@
   </head>
   <body>
     <div class="container">
-      <h1>Pizza Order!</h1><br><br>
+      <div class="jumbotron">
+        <h1>Pizza Order!</h1>
+      </div><br><br>
         <form id="pizza">
 
           <div class="form-group">
-            <label for="pizzaSize">Select Size of Pie</label>
+            <label for="pizzaSize">Select Size of Pie (Small 9$, Medium 11$,  Large 13$)</label>
             <select class="form-control" id="pizzaSize">
               <option value="9">Small</option>
               <option value="11">Medium</option>
-              <option value="12">Large</option>
+              <option value="13">Large</option>
             </select>
           </div>
 
@@ -57,9 +59,15 @@
         <button type="submit" class="btn btn-primary">Submit</button>
 
 <!-- form/container end -->
-      </form>
+      </form><br><br>
       <ul id="receipt">
-
+        <div class="well">
+          <li id="size">Selected Size: </li>
+          <li id="topping">Number of added Toppings: </li>
+          <li id="delivery">Delivery or Carry Out: </li>
+          <li id="quantity">Number of Pizzas: </li>
+          <li id="total">Order Total: $</li>
+        </div>
       </ul>
     </div>
   </body>
